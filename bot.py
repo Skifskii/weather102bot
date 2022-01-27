@@ -1,18 +1,12 @@
 import bot_config
-import logging
 from aiogram import Bot, Dispatcher, executor, types
 import datetime
 import requests
 
 #weatherbot
 
-logging.basicConfig(level=logging.INFO)
-
 bot = Bot(token=bot_config.telegram_token)
 dp = Dispatcher(bot)
-
-def get_weather(city, token):
-    pass
 
 
 @dp.message_handler(commands="start")
