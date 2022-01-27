@@ -13,6 +13,12 @@ dp = Dispatcher(bot)
 async def start(message: types.Message):
     await message.answer("Напиши название города!")
 
+
+@dp.message_handler(commands="info")
+async def start(message: types.Message):
+    await message.answer("Weather102Bot\n\nРазработчик - sskifskii")
+
+
 @dp.message_handler()
 async def get_weather(message: types.Message):
     try:
